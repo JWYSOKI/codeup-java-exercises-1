@@ -1,8 +1,25 @@
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
-        for(double i = 2;i<100000;i = Math.pow(i,2)){
-            System.out.println((int)i);
+        for (int i = 0;i<=100;i++){
+            if(i%15==0) {
+                System.out.println("FizzBuzz");
+                continue;
+            }
+            if(i%3==0){
+                System.out.println("Fizz");
+                continue;
+            }
+            if(i%5==0){
+                System.out.println("Buzz");
+                continue;
+            }
+            else {
+                System.out.println(i);
+            }
+
+            }
+
         }
     }
-}
+
