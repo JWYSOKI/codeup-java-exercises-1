@@ -90,10 +90,34 @@ public class ControlFlowExercises {
 //       while(confirmation);
 
 
+boolean confirmation;
+do{
+    int userInput;
 
+    System.out.println("Enter a numerical grade");
+    userInput = scan.nextInt();
+    if(userInput>=88){
+        System.out.println("A");
+    }
+    if(userInput<88 && userInput >79){
+        System.out.println("B");
+    }
+    if(userInput<79 && userInput >66){
+        System.out.println("C");
+    }
+    if(userInput<66 && userInput >59){
+        System.out.println("D");
+    }
+    if(userInput<59){
+        System.out.println("F");
+    }
 
+    String keepGoing;
+    System.out.println("Continue - yes/no");
+    keepGoing = scan.next();
+    confirmation = keepGoing.equals("yes");
 
-
+} while(confirmation);
 
 
         }
