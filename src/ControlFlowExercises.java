@@ -96,8 +96,14 @@ do{
 
     System.out.println("Enter a numerical grade");
     userInput = scan.nextInt();
-    if(userInput>=88){
+    if(userInput>97){
+        System.out.println("A+");
+    }
+    if(userInput<97 && userInput>93){
         System.out.println("A");
+    }
+    if(userInput<93 && userInput>=90){
+        System.out.println("A-");
     }
     if(userInput<88 && userInput >79){
         System.out.println("B");
