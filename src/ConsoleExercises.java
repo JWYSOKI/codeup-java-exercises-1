@@ -11,16 +11,12 @@ public class ConsoleExercises {
         userInput = scan.nextInt();
         System.out.println("You entered: --> \"" + userInput + "\" <--");
 
-        String firstString;
-        String secondString;
-        String thirdString;
         System.out.println("Enter three seperate words:");
-        firstString = scan.next();
-        secondString = scan.next();
-        thirdString = scan.next();
-        System.out.println(firstString);
-        System.out.println(secondString);
-        System.out.println(thirdString);
+        String firstString = scan.next();
+        String secondString = scan.next();
+        String thirdString = scan.next();
+        System.out.printf("%s " + "%s " + "%s",firstString, secondString, thirdString);
+        System.out.println("");
         scan.nextLine();
 
 
