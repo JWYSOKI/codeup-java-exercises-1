@@ -14,7 +14,7 @@ public class Bob {
 
             if (userInput.endsWith("?")) {
                 System.out.println("Sure.");
-            }else if (userInput.equals("Shut up!")){
+            }else if (userInput.equalsIgnoreCase("Shut up!")){
                 System.out.println("Later brah!");
                 confirmation = false;
             }else if (userInput.equals("")) {
