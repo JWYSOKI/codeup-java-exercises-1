@@ -18,9 +18,9 @@ public class MethodsExercises {
 //        Scanner scan = new Scanner(System.in);
 //
 //
-//        goFactorial();
+        goFactorial();
 
-//        rollDice();
+        rollDice();
 
 
     }
@@ -98,6 +98,8 @@ public class MethodsExercises {
             System.out.println("Thanks for playing!");
         }
     }
+
+
 
 
 

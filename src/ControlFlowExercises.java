@@ -54,30 +54,30 @@ public class ControlFlowExercises {
 //            }
 //        }
 //
-//boolean confirmation;
-//String keepGoing;
-//
-//       do {
-//           int userInput;
-//           int squared;
-//           int cubed;
-//
-//
-//           System.out.println("Enter an integer");
-//           userInput = scan.nextInt();
-//           System.out.println("number  |  squared  |  cubed");
-//           System.out.println("------  |  -------  |  -----  ");
-//
-//           for (int i = 1; i <= userInput; i++) {
-//               System.out.printf("%-8d" + "| " + "%-11d" + "| " + "%-1d", i, i * i, i * i * i);
-//               System.out.println("");
-//           }
-//           System.out.println("Continue - yes/no?");
-//           keepGoing = scan.next();
-//          confirmation = keepGoing.equals("yes");
-//       }
-//
-//       while(confirmation);
+boolean confirmation;
+String keepGoing;
+
+       do {
+           int userInput;
+           int squared;
+           int cubed;
+
+
+           System.out.println("Enter an integer");
+           userInput = scan.nextInt();
+           System.out.println("number  |  squared  |  cubed");
+           System.out.println("------  |  -------  |  -----  ");
+
+           for (int i = 1; i <= userInput; i++) {
+               System.out.printf("%-8d" + "| " + "%-11d" + "| " + "%-1d", i, i * i, i * i * i);
+               System.out.println("");
+           }
+           System.out.println("Continue - yes/no?");
+           keepGoing = scan.next();
+          confirmation = keepGoing.equals("yes");
+       }
+
+       while(confirmation);
 
 
 //boolean confirmation;
