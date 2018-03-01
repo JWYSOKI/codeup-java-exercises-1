@@ -18,20 +18,11 @@ public class HighLow {
         }
     }
 
-
-
     public static void outOfGuesses(){
         Scanner scan = new Scanner(System.in);
         System.out.println("Really? If you haven't got it by now you never will.");
-        System.out.println("Would you like to play again? [y/n]");
-        String playAgain = scan.nextLine();
-        if(playAgain.equals("y")){
-            highLow();
-        }else{
-            System.out.println("Thanks for playing, better luck next time");
-        }
+        playAgain();
     }
-
 
 
     public static void highLow() {
@@ -45,7 +36,7 @@ public class HighLow {
                     System.out.println("Guess a number between 1 and 100! You get 7 guesses!");
                 }
 
-                if(count ==7){
+                if(count == 7){
                     outOfGuesses();
                     correct = true;
                 }

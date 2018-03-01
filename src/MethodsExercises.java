@@ -82,13 +82,18 @@ public class MethodsExercises {
 
     public static void rollDice(){
         Scanner scan = new Scanner(System.in);
+
         System.out.println("Enter the number of sides on your die");
+
         int userInput = scan.nextInt();
+
      int roll1 = (int)Math.ceil(Math.random()*userInput);
      int roll2 = (int)Math.ceil(Math.random()*userInput);
-        System.out.println("First die was " + roll1);
-        System.out.println("Second die was " + roll2);
+
+        System.out.println("The first die was " + roll1);
+        System.out.println("The second die was " + roll2);
         scan.nextLine();
+
         System.out.println("Play again? [y/n]");
         String answer = scan.nextLine();
         if(answer.equalsIgnoreCase("y")){
