@@ -8,7 +8,6 @@ public class Input {
 
 
     public String getString() {
-        System.out.println("Enter a string");
         return scanner.nextLine();
     }
 
@@ -25,8 +24,7 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-        System.out.println("Enter a number");
-        int userInput = scanner.nextInt();
+        int userInput = getInt();
         if (userInput < min || userInput > max) {
             return getInt(min, max);
         } else return userInput;
@@ -47,35 +45,14 @@ public class Input {
     }
 
     public double getDouble() {
-        System.out.println("Enter a number (double)");
         double userInput = scanner.nextDouble();
         return userInput;
     }
 
     public double getDouble(String prompt) {
         System.out.println(prompt);
-        double userInput = scanner.nextDouble();
-        return userInput;
+        return getDouble();
     }
 
 
-
-    public static void main(String[] args) {
-
-                Input newInput = new Input();
-                System.out.println(newInput.getString());
-                System.out.println(newInput.yesNo());
-                System.out.println(newInput.getInt(1,100));
-                System.out.println(newInput.getInt());
-                System.out.println(newInput.getDouble(0.01,99.99));
-                System.out.println(newInput.getDouble());
-            }
-
-        }
-
-
-
-
-
-
-
+}
