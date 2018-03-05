@@ -19,7 +19,7 @@ public class CircleApp {
         } while(input.yesNo("Would you like to go again? [yes/no]"));
 
         if(Circle.count>1) {
-            output = output + "s";
+            output += "s";
         }
         System.out.println("Thanks for playing. You made a total of " + Circle.count + " " +output);
     }

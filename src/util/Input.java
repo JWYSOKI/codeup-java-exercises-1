@@ -8,7 +8,14 @@ public class Input {
 
 
     public String getString() {
-        return scanner.nextLine();
+        String userInput = scanner.next();
+        return userInput;
+    }
+
+    public String getString(String prompt) {
+        System.out.println(prompt);
+        String userInput = scanner.nextLine();
+        return userInput;
     }
 
     public boolean yesNo() {
@@ -31,7 +38,6 @@ public class Input {
     }
 
     public int getInt() {
-        System.out.println("Enter a number");
         int userInput = scanner.nextInt();
         return userInput;
     }
