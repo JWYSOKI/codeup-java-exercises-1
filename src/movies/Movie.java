@@ -1,21 +1,29 @@
 package movies;
-
 public class Movie {
 
-    private String name;
+    private String title;
     private String category;
+    private int rating;
 
-    public Movie(String name, String category) {
-        this.name = name;
+    public Movie(String title, String category) {
+        this.title = title;
         this.category = category;
     }
 
-    public String getName() {
-        return name;
+    public int getRating() {
+        return rating;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getCategory() {
@@ -26,6 +34,13 @@ public class Movie {
         this.category = category;
     }
 
+    public static Movie[] movieFinder = MoviesArray.findAll();
 
-    static Movie[] movieFinder = MoviesArray.findAll();
+//   public static Input userInput = new Input();
+
+
+
+
+
 }
+

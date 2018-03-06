@@ -1,6 +1,17 @@
 package movies;
 
+import java.util.Random;
+
 public class MoviesArray {
+
+
+    public static void addRating(Movie[] movieFinder) {
+        Random rng = new Random();
+        for (Movie movie : movieFinder) {
+            movie.setRating(rng.nextInt(10));
+        }
+    };
+
     public static Movie[] findAll() {
         return new Movie[]{
             new Movie("Citizen Kane", "drama"),
