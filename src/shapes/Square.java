@@ -16,8 +16,6 @@ public class Square extends Quadrilateral {
 
     }
 
-
-
     @Override
     public double getPerimeter() {
         return length * 4;
