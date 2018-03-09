@@ -6,17 +6,25 @@ import java.util.Scanner;
 public class GradesApplication {
 
     public static void CommandLineGame(HashMap <String, Student> students) {
+        int total = 0;
         System.out.println("Welcome to the grading application!");
         System.out.println("Here are our students GitHub usernames");
         do {
             System.out.println(students.keySet());
-            System.out.println("What student would you like to see more information on? You can also type 'all' to see all the students and their grades");
+            System.out.println("What student would you like to see more information on? \n" +
+                    "You can also type 'all' to see all the students and their grades, or 'overall' to see the classes overall grade average");
             Scanner scan = new Scanner(System.in);
             String userChoice = scan.nextLine();
-            if(userChoice.equalsIgnoreCase("all")){
-               for(String student:students.keySet()){
-                   System.out.println(students.get(student).getName() + students.get(student).getGrades() );
+            if(userChoice.equalsIgnoreCase("all")) {
+                for (String student : students.keySet()) {
+                    System.out.println(students.get(student).getName() + students.get(student).getGrades());
+                }
+            }
+               if(userChoice.equalsIgnoreCase("Overall")) {
+                   for (String student : students.keySet()) {
+                       total += students.get(student).getGradeAverage();
                }
+               System.out.println("The classes overall grade average is " + total/students.size());
                 System.out.println("Would you like to see another student? [y/n]");
                 String keepGoing = scan.next();
                 if (keepGoing.equalsIgnoreCase("n")){
@@ -46,13 +54,7 @@ public class GradesApplication {
         } while(true);
     }
 
-
-
-
-
     public static void main(String[] args) {
-
-
 
         HashMap<String, Student> students = new HashMap<>();
 
@@ -60,7 +62,6 @@ public class GradesApplication {
         Student s2 = new Student("Alexandra");
         Student s3 = new Student("David");
         Student s4 = new Student("Matt");
-
 
         s1.addGrade(92);
         s1.addGrade(88);
@@ -82,7 +83,5 @@ public class GradesApplication {
         CommandLineGame(students);
 
     }
-
-
 
 }
