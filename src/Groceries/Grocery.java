@@ -7,11 +7,10 @@ import java.util.HashMap;
 
 public class Grocery {
 
-
     public static void main(String[] args) {
 
-        ArrayList<Item> groceryList = new ArrayList<>();
-
+//        ArrayList<Item> groceryList = new ArrayList<>();
+        GroceryList groceryList = new GroceryList();
         HashMap<Integer, String> categories = new HashMap();
 
         categories.put(1,"Dairy");
@@ -20,14 +19,14 @@ public class Grocery {
         categories.put(4,"Bakery");
         categories.put(5,"Frozen");
         categories.put(6,"Household Items");
-        getGroceries(categories, groceryList);
+        getGroceries(categories, groceryList.getGroceryList());
     }
 
     public static Item getGroceries(HashMap categories, ArrayList groceryList) {
         Input input = new Input();
         Item newItem;
-
         do {
+
             System.out.println("Would you like to create a grocery list? [y/n]");
             String userInput = input.getString();
 
@@ -36,7 +35,6 @@ public class Grocery {
             }
                 System.out.println("Choose the category of the item you'd like to add [enter the corresponding number]");
                 System.out.println(categories);
-
 
                 Object newCategory = categories.get(input.getInt());
 
@@ -47,10 +45,11 @@ public class Grocery {
                 int userQuantity = input.getInt();
 
                 newItem = new Item(userItem, userQuantity, newCategory);
-
                 groceryList.add(newItem);
-                System.out.println(groceryList);
-                return newItem;
+
+            for(Object grocery : groceryList){
+                System.out.println(grocery);
+            }
 
         }while(true);
 
